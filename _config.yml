@@ -1,1 +1,10 @@
-theme: jekyll-theme-minimal
+# site settings
+title: Your awesome title
+author: Your name
+description: "Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+# build settings
+port: 4000
+highlighter: pygments
+markdown: redcarpet
+permalink: pretty
