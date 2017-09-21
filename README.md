@@ -1,37 +1,8 @@
-## Welcome to GitHub Pages
+## Source code of my blog
 
-You can use the [editor on GitHub](https://github.com/pesoto/pesoto.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The site is available at - https://nikhita.github.io/. It has been hosted using Github pages.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Prior to building the new website, I was using the [Lanyon](https://github.com/poole/lanyon) theme. I have written two detailed tutorials about how I had made the blog using Lanyon. They turned out to be quite useful while rebuilding the site! Here they are for your quick reference:
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pesoto/pesoto.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* [How to build a blog using Github, Jekyll and Lanyon](https://nikhita.github.io/build-blog-using-github-jekyll)
+* [SEO for Jekyll blogs](https://nikhita.github.io/build-blog-using-github-jekyll) - if you have a jekyll blog, definitely read this! 
