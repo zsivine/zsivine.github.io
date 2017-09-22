@@ -439,6 +439,10 @@ pre code.hljs {
 			@include span-columns(4);
 		}
 		font-size: 0.9em;
+		i {
+			width: 1.25em;
+			text-align: left;
+		}
 		ul {
 			@extend %default-ul;
 		}
@@ -479,6 +483,10 @@ pre code.hljs {
 			margin-top: 0;
 		}
 		font-size: 0.9em;
+		i {
+			width: 1.25em;
+			text-align: right;
+		}
 	}
 }
 
