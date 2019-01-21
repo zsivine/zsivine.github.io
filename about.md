@@ -18,6 +18,38 @@ In July 2018, I finished my PhD in Mathematics from the University of California
 <br>Shandong University, China<br>
 
 
+<br>
+<h2>Honors, Awards and Recognition</h2>
+<strong>Member of Conference Committee</strong>
+<br>ACM Multimedia Systems Conference (MMsys), 2019
+<br>IEEE International Conference on Acoustics, Speech, and 
+	Signal Processing (ICASSP), 2019
+
+<strong>Paper reviewer</strong>
+<br>IEEE Transactions on Information Forensics and Security
+<br>IEEE Transactions on Image Processing
+<br>IEEE International Conference on Image Processing
+<br>IEEE Winter Conference on Applications of Computer Vision
+<br>IEEE Transactions on Vehicular Technology
+<br>Neural Processing Letters, Springer
+<br>Neural Networks, Elsevier
+<br>International Journal of Image and Graphics
+<br>Communications in Mathematical Sciences
+
+<strong>Second Awards in Both Low Latency Image Classsification and Detection</strong>
+<br><a href="https://lpirc.ecn.purdue.edu/">
+    IEEE Low Power Image Recognition Challenge II (LPIRC-II), 2018</a><br>
+<strong>Kovalevsky Outstanding Ph.D. Thesis Award</strong>
+<br>University of California, Irvine, 2017<br>
+<strong>SIAM Student Travel Award</strong>
+<br>Society for Industrial and Applied Mathematics (SIAM), 2016<br>
+<strong>Von Neumann Outstanding Research Award</strong>
+<br>University of California, Irvine, 2015<br>
+<strong>National Scholarship for Outstanding Undergraduate</strong>
+<br>Ministry of Education, P.R.China, 2007<br>
+
+
+
 
 <br>
 Download my <a href="https://github.com/zsivine/zsivine.github.io/raw/master/CV/Research_CV.pdf" download="Research_CV">CV</a><br>
