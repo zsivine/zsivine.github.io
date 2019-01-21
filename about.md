@@ -9,7 +9,7 @@ In July 2018, I finished my PhD in Mathematics from the University of California
 <br>
 <h2>Education</h2>
 <strong>Ph.D. in Mathematics, (2012 - 2017) </strong>
-<br>University of California, Irvine, USA<br>
+<br>University of California, Irvine, USA
 <br>Advisor: <a href="https://www.math.uci.edu/people/jack-xin">
     Jack Xin</a><br>
 <strong>Master in Computational Mathematics, (2009 - 2012) </strong>
