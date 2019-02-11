@@ -20,18 +20,22 @@ In July 2018, I finished my PhD in Mathematics from the University of California
 
 <br>
 <h2>Honors, Awards and Recognition</h2>
+
 <strong>Member of Conference Committee</strong>
 <br>    ACM Multimedia Systems Conference (MMsys), 2019
 <br>    IEEE International Conference on Acoustics, Speech, and 
 	Signal Processing (ICASSP), 2019
+<br>    International Joint Conferences on Artificial Intelligence (IJCAI), 2019
+
 
 <strong>Paper reviewer</strong>
+<br>    International Conference on Computer Vision (ICCV)
 <br>    IEEE Transactions on Information Forensics and Security
 <br>    IEEE Transactions on Signal Processing
 <br>    IEEE Transactions on Image Processing
 <br>    IEEE Transactions on Vehicular Technology
-<br>    IEEE International Conference on Image Processing
-<br>    IEEE Winter Conference on Applications of Computer Vision
+<br>    IEEE International Conference on Image Processing (ICIP)
+<br>    IEEE Winter Conference on Applications of Computer Vision (WACV)
 <br>    Neural Processing Letters, Springer
 <br>    Neural Networks, Elsevier
 <br>    International Journal of Image and Graphics
