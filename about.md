@@ -28,7 +28,8 @@ In July 2018, I finished my PhD in Mathematics from the University of California
 <br>    International Joint Conferences on Artificial Intelligence (IJCAI), 2019
 
 
-<strong>Paper reviewer</strong>
+<strong>Conference and Journal Review</strong>
+<br>    Conference on Neural Information Processing Systems (NeurIPS)
 <br>    International Conference on Computer Vision (ICCV)
 <br>    IEEE Transactions on Information Forensics and Security
 <br>    IEEE Transactions on Signal Processing
