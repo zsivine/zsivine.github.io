@@ -22,27 +22,41 @@ In July 2018, I finished my PhD in Mathematics from the University of California
 <h2>Honors, Awards and Recognition</h2>
 
 <strong>Member of Conference Committee</strong>
-<br>    ACM Multimedia Systems Conference (MMsys), 2019
+<br>    ACM Multimedia Systems Conference (MMsys) \
+        &ensp; &ensp; 2019
 <br>    IEEE International Conference on Acoustics, Speech, and 
-	Signal Processing (ICASSP), 2019
-<br>    International Joint Conferences on Artificial Intelligence (IJCAI), 2019
+	Signal Processing (ICASSP) \
+	    &ensp; &ensp; 2019
+<br>    International Joint Conferences on Artificial Intelligence (IJCAI) \
+        &ensp; &ensp; 2019
 
 
-<strong>Conference and Journal Review</strong>
-<br>    Conference on Neural Information Processing Systems (NeurIPS)
-<br>    International Conference on Computer Vision (ICCV)
+<strong>Conference Review</strong>
+<br>    AAAI Conference on Artificial Intelligence (AAAI) \
+        &ensp; &ensp; 2020; 2021 
+<br>    Conference on Neural Information Processing Systems (NeurIPS) \
+        &ensp; &ensp; 2020
+<br>    International Conference on Computer Vision (ICCV) \
+        &ensp; &ensp; 2019
+<br>    IEEE International Conference on Image Processing (ICIP) \
+        &ensp; &ensp; 2018; 2019
+<br>    IEEE Winter Conference on Applications of Computer Vision (WACV) \
+        &ensp; &ensp; 2019
+<br>    IEEE Conference on Computer Vision and Pattern Recognition (CVPR) \
+        &ensp; &ensp; 2020
+<br>    European Conference on Computer Vision (ECCV) \
+        &ensp; &ensp; 2020
+
+<strong>Journal Review</strong>
 <br>    IEEE Transactions on Information Forensics and Security
 <br>    IEEE Transactions on Signal Processing
 <br>    IEEE Transactions on Image Processing
 <br>    IEEE Transactions on Vehicular Technology
-<br>    IEEE International Conference on Image Processing (ICIP)
-<br>    IEEE Winter Conference on Applications of Computer Vision (WACV)
-<br>    IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 
-<br>    European Conference on Computer Vision (ECCV)
 <br>    Neural Processing Letters, Springer
 <br>    Neural Networks, Elsevier
 <br>    International Journal of Image and Graphics
 <br>    Communications in Mathematical Sciences
+
 
 <strong>Second Awards in Both Low Latency Image Classsification and Detection</strong>
 <br>    <a href="https://lpirc.ecn.purdue.edu/">
