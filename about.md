@@ -3,8 +3,13 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-I am currently a senior machine learning engineer at Qualcomm AI Research. 
-In July 2018, I finished my PhD in Mathematics from the University of California, Irvine, with advisor Prof. Jack Xin. I started my academic career in mathematics, with a Bachelor's degree in Applied Mathematics and then a Master's degree of Computational Mathemtics from Shandong University, China. Previously, I did internships in Black Knight Financial Services and in data scientist team of Zillow. During my PhD, I joined a research project cooperated with Qualcomm computer vision team and after graduation, I joined that group to continue my research:  applied mathematics and optimization on the Edge, like mobile and IoT devices.
+I am currently a staff machine learning researcher at the Computer Vision team of Qualcomm AI Research. 
+In July 2017, I finished my PhD in Mathematics from the University of California, Irvine, with advisor Prof. Jack Xin. 
+I started my academic career in mathematics, with a Bachelor's degree in Applied Mathematics and then a Master's degree of Computational Mathematics from Shandong University, China. 
+Previously, I did internships in Black Knight Financial Services and in data scientist team of Zillow. 
+During my PhD study, I joined a research project cooperated with Qualcomm computer vision team. 
+After graduation, I joined that group to continue my research:  applied mathematics and optimization on the Edge devices.
+
 
 <br>
 <h2>Education</h2>
