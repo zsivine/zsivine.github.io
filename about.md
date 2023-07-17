@@ -12,6 +12,17 @@ After graduation, I joined that group to continue my research:  applied mathemat
 
 
 <br>
+<h2>Work Experience</h2>
+<strong>Qualcomm </strong>
+<br>    &ensp; &ensp; Staff Engineer, (2020 -- ) 
+<br>    &ensp; &ensp; Senior Engineer, (2017 -- 2020) <br> 
+<strong>Zillow Group </strong>
+<br>    &ensp; &ensp; Internship, 2016 <br>
+<strong>Black Knight Financial Services </strong>
+<br>    &ensp; &ensp; Internship, 2015 <br>
+
+
+<br>
 <h2>Education</h2>
 <strong>Ph.D. in Mathematics, (2012 - 2017) </strong>
 <br>    University of California, Irvine, USA
@@ -27,45 +38,38 @@ After graduation, I joined that group to continue my research:  applied mathemat
 <h2>Honors, Awards and Recognition</h2>
 
 <strong>Member of Conference Committee</strong>
-<br>    ACM Multimedia Systems Conference (MMsys) \
+<br>    &ensp; &ensp; ACM Multimedia Systems Conference (MMsys) \
         &ensp; &ensp; 2019
-<br>    IEEE International Conference on Acoustics, Speech, and 
+<br>    &ensp; &ensp; IEEE International Conference on Acoustics, Speech, and 
 	Signal Processing (ICASSP) \
 	    &ensp; &ensp; 2019
-<br>    International Joint Conferences on Artificial Intelligence (IJCAI) \
+<br>    &ensp; &ensp; International Joint Conferences on Artificial Intelligence (IJCAI) \
         &ensp; &ensp; 2019
 
 
 <strong>Conference Review</strong>
-<br>    AAAI Conference on Artificial Intelligence (AAAI) \
-        &ensp; &ensp; 2020; 2021 
-<br>    Conference on Neural Information Processing Systems (NeurIPS) \
-        &ensp; &ensp; 2020
-<br>    International Conference on Computer Vision (ICCV) \
-        &ensp; &ensp; 2019
-<br>    IEEE International Conference on Image Processing (ICIP) \
-        &ensp; &ensp; 2018; 2019
-<br>    IEEE Winter Conference on Applications of Computer Vision (WACV) \
-        &ensp; &ensp; 2019
-<br>    IEEE Conference on Computer Vision and Pattern Recognition (CVPR) \
-        &ensp; &ensp; 2020
-<br>    European Conference on Computer Vision (ECCV) \
-        &ensp; &ensp; 2020
+<br>    &ensp; &ensp; AAAI Conference on Artificial Intelligence (AAAI)
+<br>    &ensp; &ensp; Conference on Neural Information Processing Systems (NeurIPS)
+<br>    &ensp; &ensp; International Conference on Computer Vision (ICCV)
+<br>    &ensp; &ensp; IEEE International Conference on Image Processing (ICIP)
+<br>    &ensp; &ensp; IEEE Winter Conference on Applications of Computer Vision (WACV)
+<br>    &ensp; &ensp; IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
+<br>    &ensp; &ensp; European Conference on Computer Vision (ECCV)
 
 <strong>Journal Review</strong>
-<br>    IEEE Transactions on Information Forensics and Security
-<br>    IEEE Transactions on Signal Processing
-<br>    IEEE Transactions on Image Processing
-<br>    IEEE Transactions on Vehicular Technology
-<br>    Neural Processing Letters, Springer
-<br>    Neural Networks, Elsevier
-<br>    International Journal of Image and Graphics
-<br>    Communications in Mathematical Sciences
+<br>    &ensp; &ensp; IEEE Transactions on Information Forensics and Security
+<br>    &ensp; &ensp; IEEE Transactions on Signal Processing
+<br>    &ensp; &ensp; IEEE Transactions on Image Processing
+<br>    &ensp; &ensp; IEEE Transactions on Vehicular Technology
+<br>    &ensp; &ensp; Neural Processing Letters, Springer
+<br>    &ensp; &ensp; Neural Networks, Elsevier
+<br>    &ensp; &ensp; International Journal of Image and Graphics
+<br>    &ensp; &ensp; Communications in Mathematical Sciences
 
 
 <strong>Second Awards in Both Low Latency Image Classsification and Detection</strong>
 <br>    <a href="https://lpirc.ecn.purdue.edu/">
-    IEEE Low Power Image Recognition Challenge II (LPIRC-II), 2018</a><br>
+    &ensp; &ensp; IEEE Low Power Image Recognition Challenge II (LPIRC-II), 2018</a><br>
 <strong>Kovalevsky Outstanding Ph.D. Thesis Award</strong>
 <br>    University of California, Irvine, 2017<br>
 <strong>SIAM Student Travel Award</strong>
