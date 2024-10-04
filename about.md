@@ -3,12 +3,7 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-I am currently a staff machine learning researcher at the Computer Vision team of Qualcomm AI Research. 
-In July 2017, I finished my PhD in Mathematics from the University of California, Irvine, with advisor Prof. Jack Xin. 
-I started my academic career in mathematics, with a Bachelor's degree in Applied Mathematics and then a Master's degree of Computational Mathematics from Shandong University, China. 
-Previously, I did internships in Black Knight Financial Services and in data scientist team of Zillow. 
-During my PhD study, I joined a research project cooperated with Qualcomm computer vision team. 
-After graduation, I joined that group to continue my research:  applied mathematics and optimization on the Edge devices.
+I am currently a staff machine learning researcher with the Computer Vision team at Qualcomm AI Research. In July 2017, I earned my PhD in Mathematics from the University of California, Irvine, under the guidance of Prof. Jack Xin. My academic journey began with a Bachelor's in Applied Mathematics, followed by a Master's in Computational Mathematics from Shandong University, China. During my studies, I interned at Black Knight Financial Services and the data science team at Zillow. While pursuing my PhD, I collaborated on a research project with Qualcomm's computer vision team, which led me to join the group after graduation. My research now focuses on Segmentations, Detections, Foundation models, Multi-modality AI and Optmiation on Edge-AI and Hybrid-AI.
 
 
 <br>
