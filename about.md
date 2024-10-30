@@ -69,13 +69,13 @@ I am currently a staff machine learning researcher at Qualcomm AI Research. In J
 <br>    <a href="https://lpirc.ecn.purdue.edu/">
     &ensp; &ensp; IEEE Low Power Image Recognition Challenge II (LPIRC-II), 2018</a><br>
 <strong>Kovalevsky Outstanding Ph.D. Thesis Award</strong>
-<br>    University of California, Irvine, 2017<br>
+    <br> &ensp; &ensp; University of California, Irvine, 2017<br>
 <strong>SIAM Student Travel Award</strong>
-<br>    Society for Industrial and Applied Mathematics (SIAM), 2016<br>
+    <br> &ensp; &ensp; Society for Industrial and Applied Mathematics (SIAM), 2016<br>
 <strong>Von Neumann Outstanding Research Award</strong>
-<br>    University of California, Irvine, 2015<br>
+    <br> &ensp; &ensp; University of California, Irvine, 2015<br>
 <strong>National Scholarship for Outstanding Undergraduate</strong>
-<br>    Ministry of Education, P.R.China, 2007<br>
+    <br>  &ensp; &ensp; Ministry of Education, P.R.China, 2007<br>
 
 
 
