@@ -32,19 +32,20 @@ I am currently a staff machine learning researcher at Qualcomm AI Research. In J
 <br>
 <h2>Honors, Awards and Recognition</h2>
 
-<strong>IEEE Senior Member, since 2023 </strong>
+<strong>IEEE Senior Member, promoted in 2023 </strong>
 
-<strong>Member of Conference Committee</strong>
+
+<!-- <strong>Member of Conference Committee</strong>
 <br>    &ensp; &ensp; ACM Multimedia Systems Conference (MMsys) \
         &ensp; &ensp; 2019
 <br>    &ensp; &ensp; IEEE International Conference on Acoustics, Speech, and 
 	Signal Processing (ICASSP) \
 	    &ensp; &ensp; 2019
 <br>    &ensp; &ensp; International Joint Conferences on Artificial Intelligence (IJCAI) \
-        &ensp; &ensp; 2019
+        &ensp; &ensp; 2019 -->
 
 
-<strong>Conference Review</strong>
+<!-- <strong>Conference Review</strong>
 <br>    &ensp; &ensp; AAAI Conference on Artificial Intelligence (AAAI)
 <br>    &ensp; &ensp; Conference on Neural Information Processing Systems (NeurIPS)
 <br>    &ensp; &ensp; International Conference on Computer Vision (ICCV)
@@ -61,7 +62,7 @@ I am currently a staff machine learning researcher at Qualcomm AI Research. In J
 <br>    &ensp; &ensp; Neural Processing Letters, Springer
 <br>    &ensp; &ensp; Neural Networks, Elsevier
 <br>    &ensp; &ensp; International Journal of Image and Graphics
-<br>    &ensp; &ensp; Communications in Mathematical Sciences
+<br>    &ensp; &ensp; Communications in Mathematical Sciences -->
 
 
 <strong>Second Awards in Both Low Latency Image Classsification and Detection</strong>
