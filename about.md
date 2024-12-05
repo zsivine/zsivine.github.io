@@ -3,14 +3,16 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-I am currently a staff machine learning researcher at Qualcomm AI Research. In July 2017, I earned my PhD in Mathematics from the University of California, Irvine, under the guidance of Prof. Jack Xin. My academic journey began with a Bachelor's in Applied Mathematics, followed by a Master's in Computational Mathematics from Shandong University, China. During my studies, I interned at Black Knight Financial Services and the data science team at Zillow. While pursuing my PhD, I collaborated on a research project with Qualcomm's computer vision team, which led me to join the group after graduation. My research now focuses on Segmentations, Detections, Foundation models, Multi-modality AI and Optmiation on Edge-AI and Hybrid-AI.
+I am a senior staff machine learning researcher and tech lead at Qualcomm Computer Vision Group. In July 2017, I earned my PhD in Mathematics from the University of California, Irvine, under the guidance of Prof. Jack Xin. My academic journey began with a Bachelor's in Applied Mathematics, followed by a Master's in Computational Mathematics from Shandong University, China. During my studies, I interned at Black Knight Financial Services and the data science team at Zillow. While pursuing my PhD, I collaborated on a research project with Qualcomm's computer vision team, which led me to join the group after graduation. My research now focuses on Segmentations, Detections, Foundation models, Multi-modality AI and Optmiation on Edge-AI and Hybrid-AI.
 
 
 <br>
 <h2>Work Experience</h2>
 <strong>Qualcomm </strong>
-<br>    &ensp; &ensp; Staff Engineer, (2020 -- ) 
+<br>    &ensp; &ensp; Senior Staff Engineer, (2024 -- ) 
+<br>    &ensp; &ensp; Staff Engineer, (2020 -- 2024) 
 <br>    &ensp; &ensp; Senior Engineer, (2017 -- 2020) <br> 
+
 <strong>Zillow Group </strong>
 <br>    &ensp; &ensp; Internship, 2016 <br>
 <strong>Black Knight Financial Services </strong>
