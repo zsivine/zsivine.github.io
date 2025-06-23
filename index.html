@@ -2,61 +2,180 @@
 layout: page
 title: Shuai Zhang, Qualcomm AI
 ---
-<div class="home">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108085250-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shuai Zhang, Senior Staff AI Engineer and Manager at Qualcomm, 
+  specializing in Edge AI, numerical optimization, and computer vision.">
+  <meta name="keywords" content="machine learning, edge AI, computer vision, neural networks, Qualcomm">
+  <title>{{ page.title }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <!-- Dark Mode Toggle -->
+  <button id="theme-toggle" class="fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 z-50" aria-label="Toggle dark mode">
+    <i class="fas fa-moon dark:hidden"></i>
+    <i class="fas fa-sun hidden dark:block"></i>
+  </button>
 
-  gtag('config', 'UA-108085250-1');
-</script>
+  <!-- Navigation -->
+  <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-40">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">{{ site.title | default: "Shuai Zhang" }}</h1>
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-blue-500">Home</a>
+        <a href="#research" class="hover:text-blue-500">Research</a>
+        <a href="#resume" class="hover:text-blue-500">Resume</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-6 py-4">
+      <a href="#home" class="block py-2 hover:text-blue-500">Home</a>
+      <a href="#research" class="block py-2 hover:text-blue-500">Research</a>
+      <a href="#resume" class="block py-2 hover:text-blue-500">Resume</a>
+      <a href="#contact" class="block py-2 hover:text-blue-500">Contact</a>
+    </div>
+  </header>
 
-<!-- <img src="profile2.jpg" alt="Shuai Zhang pic" 
-  style="width:240px;height:320px;" 
-  title="Shuai Zhang"; algin="middle"> -->
+  <!-- Hero Section with Profile Photo on Left, Introduction on Right -->
+  <main>
+    <section id="home" class="container mx-auto px-6 py-20 animate-fade-in">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Profile Photo -->
+        <div class="flex-shrink-0">
+          <img src="Shuai_CVPR2018.jpeg" alt="Shuai Zhang Profile Photo" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-blue-500 shadow-lg object-cover" loading="lazy">
+        </div>
+        <!-- Introduction Text -->
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">Welcome!</h2>
+          <p class="text-lg md:text-xl mb-4">My name is Shuai Zhang, and I am a Senior Staff Machine Learning Researcher and Tech Lead at Qualcomm Computer Vision Group, USA.</p>
+          <p class="text-lg mb-6">My research interests include numerical optimization, computer vision, and neural networks, with a focus on Edge AI.</p>
+          <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="#research" class="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Explore My Research</a>
+            <a href="#resume" class="inline-block px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">View My Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!--<img src="SV-3.jpg" alt="Shuai Zhang Joshua Tree 2019" -->
-<!--  style="width:240px;height:320px;" -->
-<!--  title="Shuai Zhang"; algin="middle">-->
+    <!-- Research Section -->
+    <section id="research" class="container mx-auto px-6 py-10 bg-gray-50 dark:bg-gray-800">
+      <h2 class="text-3xl font-bold mb-8 text-center">Research Highlights</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in">
+          <h3 class="text-xl font-semibold mb-2">BinaryRelax: Quantized Neural Networks</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">A relaxation approach for training deep neural networks with quantized weights.</p>
+          <a href="/research" class="text-blue-500 hover:underline">Read More</a>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in">
+          <h3 class="text-xl font-semibold mb-2">Quantization of Low Bit-Width CNNs</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Techniques for efficient quantization in convolutional neural networks.</p>
+          <a href="/research" class="text-blue-500 hover:underline">Read More</a>
+        </div>
+      </div>
+    </section>
 
-<img src="Shuai_CVPR2018.jpeg" alt="Shuai Zhang CVPR 2018"
-style="width:240px;height:320px;"
-title="Shuai Zhang"; algin="middle">
+    <!-- Resume Section -->
+    <section id="resume" class="container mx-auto px-6 py-10">
+      <h2 class="text-3xl font-bold mb-8 text-center">Resume</h2>
+      <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md animate-fade-in text-center">
+        <p class="text-gray-600 dark:text-gray-300 mb-4">Learn more about my professional experience and qualifications.</p>
+        <a href="/assets/resume.pdf" class="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Download Resume</a>
+      </div>
+    </section>
 
-    
-<br>
-Welcome! My name is Shuai Zhang and 
-I am a senior staff machine learning researcher and tech lead at Qualcomm Computer Vision Group, USA.
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto px-6 py-10 bg-gray-200 dark:bg-gray-700">
+      <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+      <form class="max-w-md mx-auto" id="contact-form">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium">Name</label>
+          <input type="text" id="name" class="w-full p-2 rounded-md border dark:bg-gray-600" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium">Email</label>
+          <input type="email" id="email" class="w-full p-2 rounded-md border dark:bg-gray-600" required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium">Message</label>
+          <textarea id="message" class="w-full p-2 rounded-md border dark:bg-gray-600" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Send Message</button>
+      </form>
+    </section>
+  </main>
 
-<br><br>
-My research interests are
-    <i>numerical optimization</i>,
-    <i>computer vision </i>
-    and <i>neural networks</i>, especially on Edge AI.
-Feel free to look at my <a href="https://zsivine.github.io/research" target="_self">
-  research</a> and my <a href="https://zsivine.github.io/about" target="_self">resume</a> to learn more!
+  <!-- Disclaimer -->
+  <section class="container mx-auto px-6 py-6 text-center text-sm text-gray-600 dark:text-gray-400">
+    <p>NOTE: This is a personal webpage, and any views or information reflect solely the author and are not the views of Qualcomm.</p>
+  </section>
 
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-4 right-4 p-3 bg-blue-500 text-white rounded-full hidden" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-<br><br>
- <i>NOTE:</i> This is a personal webpage and any views or information reflect 
- solely the author and are not the views of the Qualcomm.
-</div>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>© {{ 'now' | date: '%Y' }} Shuai Zhang. All rights reserved.</p>
+  </footer>
 
+  <!-- JavaScript -->
+  <script>
+    // Dark Mode Toggle
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark');
+    }
 
-<!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank">
-  <img src="https://hitwebcounter.com/counter/counter.php?page=7173918&style=0005&nbdigits=5&type=page&initCount=100" 
-    title="Counter" Alt="hit web counter.com"
-    style="width:64px;height:32px;" 
-    align="right"
-    border="0" >
-</a>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
-<!-- Globe Widget -->
-<script
-        type="text/javascript"
-        id="clustrmaps"
-        src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=n&d=03ChUh64dp-ERsFZ6_OQVWgfVTw43mUK4n4FDi3EwGE&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff">
-        align="left"
-</script>
+    // Back to Top Button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.remove('hidden');
+      } else {
+        backToTop.classList.add('hidden');
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Contact Form Submission (Placeholder)
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Form submitted! Please integrate with a service like Formspree for actual functionality.');
+    });
+  </script>
+</body>
+</html>
+
