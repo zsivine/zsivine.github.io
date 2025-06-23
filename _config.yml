@@ -1,11 +1,6 @@
 
 # Site settings
-title: Shuai Zhang
-name: Shuai Zhang
-subtitle: Qualcomm AI Research
 email: zsimath@gmail.com
-description: >
-  senior staff machine learning researcher
 baseurl: ""
 url: "https://zsivine.github.io/"
 github_username:  zsivine
