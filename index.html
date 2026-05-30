@@ -1,0 +1,287 @@
+---
+layout: default
+---
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero-glow dot-grid min-h-[calc(100vh-3.5rem)] flex items-center">
+  <div class="max-w-6xl mx-auto px-6 py-24 w-full">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-16">
+
+      <!-- ── Photo column ── -->
+      <div class="shrink-0 fade-up">
+        <div class="relative w-44 lg:w-52">
+          <!-- Decorative ring -->
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-600/10 scale-105 blur-sm"></div>
+          <div class="relative w-44 lg:w-52 h-44 lg:h-52 rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl">
+            <img src="/Shuai_CVPR2018.png" alt="Shuai Zhang"
+                 class="w-full h-full object-cover">
+          </div>
+          <!-- Status pill -->
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-1.5 bg-slate-900 border border-slate-700 rounded-full px-3 py-1 text-xs shadow-xl">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span class="font-mono text-emerald-400 font-medium">Qualcomm AI Research</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Text column ── -->
+      <div class="flex-1 text-center lg:text-left fade-up d1">
+
+        <!-- Eyebrow -->
+        <p class="font-mono text-blue-400 text-xs tracking-[0.2em] uppercase mb-3">
+          Senior Staff Engineer &amp; Manager
+        </p>
+
+        <!-- Name -->
+        <h1 class="text-4xl lg:text-5xl font-bold text-slate-50 tracking-tight leading-[1.1] mb-5">
+          Shuai Zhang
+        </h1>
+
+        <!-- Bio -->
+        <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl mb-6">
+          Researcher and team lead at Qualcomm AI Research working on
+          <span class="text-slate-300">Edge AI</span>,
+          <span class="text-slate-300">on-device agentic pipelines</span>,
+          <span class="text-slate-300">computer vision</span>, and 
+          <span class="text-slate-300">numerical optimization</span>.
+          Organizer of
+          <a href="https://lpcv.ai/" target="_blank" rel="noopener noreferrer"
+             class="text-blue-400 hover:text-blue-300 underline underline-offset-2 decoration-blue-400/30 transition-colors">LPCVC</a>
+          and co-organizer of the ECV Workshop at
+          <a href="https://lpcv.ai/2025LPCVC/cvpr-workshop/" target="_blank" rel="noopener noreferrer"
+             class="text-blue-400 hover:text-blue-300 underline underline-offset-2 decoration-blue-400/30 transition-colors">CVPR-2025</a> &
+          <a href="https://ecv-workshop.github.io/" target="_blank" rel="noopener noreferrer"
+             class="text-blue-400 hover:text-blue-300 underline underline-offset-2 decoration-blue-400/30 transition-colors">CVPR-2026</a>. 
+        </p>
+
+
+        <!-- Keyword tags -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-8">
+          <span class="vtag">Edge AI</span>
+          <!-- <span class="vtag">Vision-Language-Action</span> -->
+          <span class="vtag">Multimodal Perception</span>
+          <span class="vtag">Agentic Pipeline</span>
+          <span class="vtag">Optimization and Quantization</span>
+          <span class="vtag">Foundation Models</span>
+        </div>
+
+        <!-- Stats row -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+          <div class="stat-box">
+            <div class="num">1,528<span class="text-blue-500/60 text-lg">+</span></div>
+            <div class="lbl">Citations</div>
+          </div>
+          <div class="stat-box">
+            <div class="num">14</div>
+            <div class="lbl">h-index</div>
+          </div>
+          <div class="stat-box">
+            <div class="num">17</div>
+            <div class="lbl">i10-index</div>
+          </div>
+          <div class="stat-box">
+            <div class="num">8<span class="text-blue-500/60 text-xl">+</span></div>
+            <div class="lbl">Yrs @ Qualcomm</div>
+          </div>
+        </div>
+
+        <!-- CTA row -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+          <a href="/research" class="btn-blue">
+            <i class="fas fa-flask text-xs"></i> Publications
+          </a>
+          <a href="https://scholar.google.com/citations?user=QxEgRpUAAAAJ&hl=en"
+             target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class="fas fa-graduation-cap text-xs"></i> Scholar
+          </a>
+          <a href="https://www.linkedin.com/in/shuai-zhang-20727645/"
+             target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class="fab fa-linkedin text-xs"></i> LinkedIn
+          </a>
+          <a href="https://github.com/zsivine/zsivine.github.io/raw/master/CV/Research_CV.pdf"
+             target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class="fas fa-file-alt text-xs"></i> CV
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     RECENT HIGHLIGHTS  (two-col grid)
+══════════════════════════════════════════ -->
+<section class="max-w-6xl mx-auto px-6 py-20 fade-up d2">
+  <div class="section-label">
+    <i class="fas fa-newspaper text-blue-500 opacity-80"></i>
+    Recent Work
+    <div class="line"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <!-- Paper 1 -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <div class="flex items-start justify-between gap-2 flex-wrap">
+        <span class="vtag">arXiv · 2026</span>
+        <span class="vtag amber"><i class="fas fa-circle-dot text-xs mr-0.5"></i> New</span>
+      </div>
+      <a href="https://arxiv.org/abs/2605.02739" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        Latent Bridge: Feature Delta Prediction for Efficient Dual-System VLA Model Inference
+      </a>
+      <p class="text-slate-400 text-xs">Vision-Language-Action · Efficient Inference · Robotics</p>
+    </article>
+
+    <!-- Paper 2 -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <div class="flex items-start justify-between gap-2 flex-wrap">
+        <span class="vtag">arXiv · 2026</span>
+        <span class="vtag amber"><i class="fas fa-circle-dot text-xs mr-0.5"></i> New</span>
+      </div>
+      <a href="https://arxiv.org/abs/2603.22872" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        ForeSea: AI Forensic Search with Multi-modal Queries for Video Surveillance
+      </a>
+      <p class="text-slate-400 text-xs">Multi-modal · Video Retrieval · Surveillance AI</p>
+    </article>
+
+    <!-- Paper DiSa -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <div class="flex items-start justify-between gap-2 flex-wrap">
+        <span class="vtag">arXiv · 2026</span>
+        <span class="vtag amber"><i class="fas fa-circle-dot text-xs mr-0.5"></i> New</span>
+      </div>
+      <a href="https://arxiv.org/abs/2601.20064" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        DiSa: Saliency-Aware Foreground-Background Disentangled Framework for Open-Vocabulary Semantic Segmentation
+      </a>
+      <p class="text-slate-400 text-xs">Open-Vocabulary Segmentation · Vision-Language · Saliency</p>
+    </article>
+
+    <!-- Paper 3 -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <span class="vtag">arXiv · 2025</span>
+      <a href="https://arxiv.org/abs/2506.08297" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        SEMA: A Scalable and Efficient Mamba-like Attention via Token Localization and Averaging
+      </a>
+      <p class="text-slate-400 text-xs">Efficient Attention · ViT · State Space Models</p>
+    </article>
+
+    <!-- Paper 4 -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <div class="flex items-start gap-2 flex-wrap">
+        <span class="vtag">AAAI · 2024</span>
+        <!-- <span class="vtag green">12 citations</span> -->
+      </div>
+      <a href="https://ojs.aaai.org/index.php/AAAI/article/view/28555" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        MobileInst: Video Instance Segmentation on the Mobile
+      </a>
+      <p class="text-slate-400 text-xs">Mobile AI · Instance Segmentation · Real-time</p>
+    </article>
+
+  </div>
+  <div class="mt-6 text-center">
+    <a href="/research" class="btn-ghost text-sm">
+      All publications <i class="fas fa-arrow-right text-xs ml-1"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     RESEARCH AREAS
+══════════════════════════════════════════ -->
+<section class="border-t border-slate-800/50">
+  <div class="max-w-6xl mx-auto px-6 py-20 fade-up d3">
+    <div class="section-label">
+      <i class="fas fa-layer-group text-blue-500 opacity-80"></i>
+      Research Areas
+      <div class="line"></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card rounded-xl p-5 text-center group cursor-default">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/15 transition-colors">
+          <i class="fas fa-robot text-blue-400 text-sm"></i>
+        </div>
+        <p class="text-slate-200 font-semibold text-sm mb-1">Agentic AI</p>
+        <p class="text-slate-600 text-xs leading-snug">VLA models &amp; on-device agents</p>
+      </div>
+
+      <div class="card rounded-xl p-5 text-center group cursor-default">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/15 transition-colors">
+          <i class="fas fa-eye text-blue-400 text-sm"></i>
+        </div>
+        <p class="text-slate-200 font-semibold text-sm mb-1">Computer Vision</p>
+        <p class="text-slate-600 text-xs leading-snug">Detection, segmentation, tracking</p>
+      </div>
+
+      <div class="card rounded-xl p-5 text-center group cursor-default">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/15 transition-colors">
+          <i class="fas fa-microchip text-blue-400 text-sm"></i>
+        </div>
+        <p class="text-slate-200 font-semibold text-sm mb-1">Edge AI</p>
+        <p class="text-slate-600 text-xs leading-snug">Quantization, pruning, efficiency</p>
+      </div>
+
+      <div class="card rounded-xl p-5 text-center group cursor-default">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/15 transition-colors">
+          <i class="fas fa-chart-line text-blue-400 text-sm"></i>
+        </div>
+        <p class="text-slate-200 font-semibold text-sm mb-1">Optimization</p>
+        <p class="text-slate-600 text-xs leading-snug">Non-convex &amp; compressed sensing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SELECTED EARLIER WORKS (3-col compact)
+══════════════════════════════════════════ -->
+<section class="border-t border-slate-800/50">
+  <div class="max-w-6xl mx-auto px-6 py-20 fade-up d4">
+    <div class="section-label">
+      <i class="fas fa-star text-blue-500 opacity-80"></i>
+      Highlighted Earlier Work
+      <div class="line"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+      <article class="card rounded-xl p-4 flex flex-col gap-2">
+        <div class="flex gap-2 flex-wrap">
+          <span class="vtag">ICLR 2019</span>
+        </div>
+        <a href="https://openreview.net/pdf?id=Skh4jRcKQ" target="_blank" rel="noopener noreferrer"
+           class="text-slate-200 font-medium text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+          Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets
+        </a>
+      </article>
+
+      <article class="card rounded-xl p-4 flex flex-col gap-2">
+        <div class="flex gap-2 flex-wrap">
+          <span class="vtag">KDD 2020</span>
+          <span class="vtag green">Most Influential</span>
+        </div>
+        <a href="https://arxiv.org/abs/1901.08624" target="_blank" rel="noopener noreferrer"
+           class="text-slate-200 font-medium text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+          AutoShuffleNet: Learning Permutation Matrices via Lipschitz Continuous Penalty in DNNs
+        </a>
+      </article>
+
+      <article class="card rounded-xl p-4 flex flex-col gap-2">
+        <span class="vtag">Math. Programming 2018</span>
+        <a href="https://link.springer.com/article/10.1007/s10107-018-1236-x" target="_blank" rel="noopener noreferrer"
+           class="text-slate-200 font-medium text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+          Minimization of Transformed L1 Penalty: Theory, DCA &amp; Compressed Sensing
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>

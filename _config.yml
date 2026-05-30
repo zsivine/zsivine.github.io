@@ -1,0 +1,64 @@
+
+# Site settings
+email: zsimath@gmail.com
+baseurl: ""
+url: "https://zsivine.github.io/"
+github_username:  zsivine
+disqus_baseurl: "https://zsivine.github.io/"
+disqus_shortname: https-zsivine-github-io
+permalink: :title
+
+# Build settings
+markdown: kramdown
+paginate: 5
+paginate_path: "/page:num/"
+inter_post_navigation: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Shuai Zhang"
+
+
+
+# External gems
+gems:
+  - jekyll-paginate
+  - jemoji
+  - jekyll-seo-tag
+
+
+
+social:
+  - name: GitHub
+    icon: github
+    username: zsivine
+    url: https://github.com/zsivine
+    desc: Fork me on GitHub
+    share: false
+
+  - name: ResearchGate
+    icon: researchgate
+    username: Shuai Zhang
+    url: https://www.researchgate.net/profile/Shuai_Zhang40
+    desc: Follow me on ResearchGate
+    share: true
+
+  - name: LinkedIn
+    icon: linkedin
+    username: Shuai Zhang
+    url: https://www.linkedin.com/in/shuai-zhang-20727645/
+    desc: Connect with me on LinkedIn
+    share: true
+
+  - name: Google Scholar
+    icon: google scholar
+    username: Shuai Zhang
+    url: https://scholar.google.com/citations?hl=en&user=QxEgRpUAAAAJ&view_op=list_works&citft=1&citft=2&email_for_op=zsimath%40gmail.com&gmla=AJsN-F6Mxx7vB3vSgnKL9VChmyWWg4APjw6jod7lQVO1abVXF8mTspR6W5Ccn0E7CjYB57vZVuOIDtMV6SQSrdDuEMWimckE5XgSd7a9m93wOieEW1O6RU_TrAkHEoZY7V4277V2wL4wro1o6iRt9x0_fTj8SmR8YGmnrgjvsdcUD6HmtiQQb_t0ZKRul4GQE-4eEIyyu-9WuvY_HjYI87n15hEzR5WhcTo3SlGy9oHS0t55RZpM9Xx3VVe1nSh2t1MZVM3namxL
+    desc: Follow me on Google Scholar
+    share: true
+
+
+

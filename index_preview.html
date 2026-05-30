@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shuai Zhang">
+  <meta name="keywords" content="machine learning, edge AI, computer vision, neural networks, Qualcomm, agentic AI">
+  <title>Shuai Zhang · Qualcomm AI Research</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    /* Root font scaling — all rem-based Tailwind utilities scale with this */
+    html { font-size: 15px; }
+    @media (min-width: 768px)  { html { font-size: 17px; } }
+    @media (min-width: 1024px) { html { font-size: 18px; } }
+    @media (min-width: 1280px) { html { font-size: 19px; } }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0a0f1e;
+      color: #cbd5e1;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Scroll progress bar ── */
+    #scroll-bar {
+      position: fixed; top: 0; left: 0; z-index: 100;
+      height: 2px; width: 0%;
+      background: linear-gradient(90deg, #3b82f6, #818cf8);
+      transition: width 0.1s linear;
+    }
+
+    /* ── Dot grid background ── */
+    .dot-grid {
+      background-image: radial-gradient(rgba(99,102,241,0.12) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+
+    /* ── Radial hero glow ── */
+    .hero-glow {
+      background:
+        radial-gradient(ellipse 90% 50% at 50% -5%, rgba(59,130,246,0.2) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(99,102,241,0.08) 0%, transparent 50%),
+        #0a0f1e;
+    }
+
+    /* ── Glassmorphism nav ── */
+    .glass-nav {
+      background: rgba(10,15,30,0.88);
+      backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid rgba(148,163,184,0.06);
+    }
+
+    /* ── Nav links ── */
+    .nav-link {
+      position: relative;
+      font-size: 0.8125rem; font-weight: 500;
+      letter-spacing: 0.03em;
+      color: #64748b;
+      transition: color 0.15s;
+      padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 0;
+      height: 1.5px;
+      background: #3b82f6;
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.2s ease;
+    }
+    .nav-link:hover { color: #e2e8f0; }
+    .nav-link:hover::after { transform: scaleX(1); }
+    .nav-link.active { color: #60a5fa; }
+    .nav-link.active::after { transform: scaleX(1); }
+
+    /* ── Cards ── */
+    .card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148,163,184,0.08);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .card:hover {
+      border-color: rgba(96,165,250,0.3);
+      box-shadow: 0 0 0 1px rgba(59,130,246,0.05), 0 8px 32px rgba(0,0,0,0.4);
+      transform: translateY(-1px);
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #475569;
+      margin-bottom: 1.5rem;
+    }
+    .section-label .line {
+      flex: 1; height: 1px;
+      background: linear-gradient(to right, rgba(148,163,184,0.12), transparent);
+    }
+
+    /* ── Mono tags / venue badges ── */
+    .vtag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem; font-weight: 500;
+      padding: 2px 7px; border-radius: 4px;
+      white-space: nowrap;
+      background: rgba(59,130,246,0.1);
+      color: #60a5fa;
+      border: 1px solid rgba(59,130,246,0.2);
+    }
+    .vtag.green {
+      background: rgba(34,197,94,0.08);
+      color: #4ade80;
+      border-color: rgba(34,197,94,0.2);
+    }
+    .vtag.amber {
+      background: rgba(245,158,11,0.08);
+      color: #fbbf24;
+      border-color: rgba(245,158,11,0.2);
+    }
+
+    /* ── Stat boxes ── */
+    .stat-box {
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.08);
+      border-radius: 10px; padding: 0.875rem 1.25rem;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .stat-box:hover { border-color: rgba(96,165,250,0.25); }
+    .stat-box .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.625rem; font-weight: 700;
+      color: #60a5fa; line-height: 1;
+    }
+    .stat-box .lbl {
+      font-size: 0.625rem; color: #475569;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-top: 4px; font-weight: 500;
+    }
+
+    /* ── Buttons ── */
+    .btn-blue {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.5rem 1.1rem;
+      background: #3b82f6;
+      color: #fff; border-radius: 6px;
+      font-weight: 500; font-size: 0.8125rem;
+      transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+      box-shadow: 0 0 0 0 rgba(59,130,246,0);
+    }
+    .btn-blue:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(59,130,246,0.35);
+    }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.5rem 1.1rem;
+      background: rgba(148,163,184,0.06);
+      color: #94a3b8;
+      border: 1px solid rgba(148,163,184,0.14);
+      border-radius: 6px;
+      font-weight: 500; font-size: 0.8125rem;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(96,165,250,0.4);
+      color: #93c5fd;
+      background: rgba(59,130,246,0.06);
+    }
+
+    /* ── Timeline ── */
+    .tl-track { border-left: 1px solid rgba(59,130,246,0.2); }
+    .tl-dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: #3b82f6; flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+    }
+    .tl-dot.muted {
+      background: #334155;
+      box-shadow: 0 0 0 3px rgba(51,65,85,0.4);
+    }
+
+    /* ── Fade animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.5s ease-out both; }
+    .d1 { animation-delay: 0.08s; }
+    .d2 { animation-delay: 0.16s; }
+    .d3 { animation-delay: 0.24s; }
+    .d4 { animation-delay: 0.32s; }
+
+    /* ── Back to top ── */
+    #back-to-top {
+      background: rgba(30,41,59,0.95);
+      border: 1px solid rgba(148,163,184,0.15);
+      backdrop-filter: blur(8px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    #back-to-top:hover { transform: translateY(-2px); }
+
+    /* ── Custom scrollbar ── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0a0f1e; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+    /* ── Selection ── */
+    ::selection { background: rgba(59,130,246,0.25); color: #e2e8f0; }
+  </style>
+</head>
+
+<body>
+  <!-- Scroll progress -->
+  <div id="scroll-bar"></div>
+
+  <!-- ── Navigation ── -->
+  <header class="glass-nav fixed top-0 left-0 right-0 z-50">
+    <nav class="max-w-6xl mx-auto px-6 h-14 flex justify-between items-center">
+
+      <!-- Logo -->
+      <a href="index_preview.html" class="flex items-center gap-2 group shrink-0">
+        <span class="font-mono text-blue-500 text-sm opacity-70 group-hover:opacity-100 transition-opacity select-none">&gt;_</span>
+        <span class="font-semibold text-slate-200 text-sm tracking-tight">Shuai Zhang</span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index_preview.html"        class="nav-link">Home</a>
+        <a href="about_preview.html"   class="nav-link">About</a>
+        <a href="research_preview.html"class="nav-link">Research</a>
+        <a href="webreport_preview.html" class="nav-link">Media</a>
+        <a href="https://github.com/zsivine/zsivine.github.io/raw/master/CV/Research_CV.pdf"
+           target="_blank" rel="noopener noreferrer" class="btn-ghost text-xs py-1.5 px-3">
+          <i class="fas fa-file-alt text-xs"></i> CV
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" class="md:hidden p-2 text-slate-500 hover:text-slate-200 transition-colors" aria-label="Toggle menu">
+        <i class="fas fa-bars text-sm"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800/60 px-6 py-3 space-y-1">
+      <a href="index_preview.html"         class="block py-2 text-sm text-slate-400 hover:text-slate-100 transition-colors">Home</a>
+      <a href="about_preview.html"    class="block py-2 text-sm text-slate-400 hover:text-slate-100 transition-colors">About</a>
+      <a href="research_preview.html" class="block py-2 text-sm text-slate-400 hover:text-slate-100 transition-colors">Research</a>
+      <a href="webreport_preview.html"class="block py-2 text-sm text-slate-400 hover:text-slate-100 transition-colors">Media</a>
+      <a href="https://github.com/zsivine/zsivine.github.io/raw/master/CV/Research_CV.pdf"
+         target="_blank" class="block py-2 text-sm text-blue-400 hover:text-blue-300 transition-colors">Download CV</a>
+    </div>
+  </header>
+
+  <!-- ── Main content ── -->
+  <main class="pt-14">
+    <!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero-glow dot-grid min-h-[calc(100vh-3.5rem)] flex items-center">
+  <div class="max-w-6xl mx-auto px-6 py-24 w-full">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-16">
+
+      <!-- ── Photo column ── -->
+      <div class="shrink-0 fade-up">
+        <div class="relative w-44 lg:w-52">
+          <!-- Decorative ring -->
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-indigo-600/10 scale-105 blur-sm"></div>
+          <div class="relative w-44 lg:w-52 h-44 lg:h-52 rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl">
+            <img src="file:///Users/zsimath/Documents/My-web/zsivine.github.io/Shuai_CVPR2018.png" alt="Shuai Zhang"
+                 class="w-full h-full object-cover">
+          </div>
+          <!-- Status pill -->
+          <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-1.5 bg-slate-900 border border-slate-700 rounded-full px-3 py-1 text-xs shadow-xl">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span class="font-mono text-emerald-400 font-medium">Qualcomm AI Research</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Text column ── -->
+      <div class="flex-1 text-center lg:text-left fade-up d1">
+
+        <!-- Eyebrow -->
+        <p class="font-mono text-blue-400 text-xs tracking-[0.2em] uppercase mb-3">
+          Senior Staff Engineer &amp; Manager
+        </p>
+
+        <!-- Name -->
+        <h1 class="text-4xl lg:text-5xl font-bold text-slate-50 tracking-tight leading-[1.1] mb-5">
+          Shuai Zhang
+        </h1>
+
+        <!-- Bio -->
+        <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl mb-6">
+          Researcher and team lead at Qualcomm AI Research working on
+          <span class="text-slate-300">Edge AI</span>,
+          <span class="text-slate-300">on-device agentic pipelines</span>,
+          <span class="text-slate-300">computer vision</span>, and 
+          <span class="text-slate-300">numerical optimization</span>.
+          Organizer of
+          <a href="https://lpcv.ai/" target="_blank" rel="noopener noreferrer"
+             class="text-blue-400 hover:text-blue-300 underline underline-offset-2 decoration-blue-400/30 transition-colors">LPCVC</a>
+          and co-organizer of the ECV Workshop at
+          <a href="https://lpcv.ai/2025LPCVC/cvpr-workshop/" target="_blank" rel="noopener noreferrer"
+             class="text-blue-400 hover:text-blue-300 underline underline-offset-2 decoration-blue-400/30 transition-colors">CVPR-2025</a> &  
+          <a href="https://ecv-workshop.github.io/" target="_blank" rel="noopener noreferrer"
+             class="text-blue-400 hover:text-blue-300 underline underline-offset-2 decoration-blue-400/30 transition-colors">CVPR-2026</a> &  
+        </p>
+
+        <!-- Keyword tags -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-2 mb-8">
+          <span class="vtag">Edge AI</span>
+          <!-- <span class="vtag">Vision-Language-Action</span> -->
+          <span class="vtag">Multimodal Perception</span>
+          <span class="vtag">Agentic Pipeline</span>
+          <span class="vtag">Optimization and Quantization</span>
+          <span class="vtag">Foundation Models</span>
+        </div>
+
+        <!-- Stats row -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+          <div class="stat-box">
+            <div class="num">1,528<span class="text-blue-500/60 text-lg">+</span></div>
+            <div class="lbl">Citations</div>
+          </div>
+          <div class="stat-box">
+            <div class="num">14</div>
+            <div class="lbl">h-index</div>
+          </div>
+          <div class="stat-box">
+            <div class="num">17</div>
+            <div class="lbl">i10-index</div>
+          </div>
+          <div class="stat-box">
+            <div class="num">8<span class="text-blue-500/60 text-xl">+</span></div>
+            <div class="lbl">Yrs @ Qualcomm</div>
+          </div>
+        </div>
+
+        <!-- CTA row -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+          <a href="research_preview.html" class="btn-blue">
+            <i class="fas fa-flask text-xs"></i> Publications
+          </a>
+          <a href="https://scholar.google.com/citations?user=QxEgRpUAAAAJ&hl=en"
+             target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class="fas fa-graduation-cap text-xs"></i> Scholar
+          </a>
+          <a href="https://www.linkedin.com/in/shuai-zhang-20727645/"
+             target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class="fab fa-linkedin text-xs"></i> LinkedIn
+          </a>
+          <a href="https://github.com/zsivine/zsivine.github.io/raw/master/CV/Research_CV.pdf"
+             target="_blank" rel="noopener noreferrer" class="btn-ghost">
+            <i class="fas fa-file-alt text-xs"></i> CV
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     RECENT HIGHLIGHTS  (two-col grid)
+══════════════════════════════════════════ -->
+<section class="max-w-6xl mx-auto px-6 py-20 fade-up d2">
+  <div class="section-label">
+    <i class="fas fa-newspaper text-blue-500 opacity-80"></i>
+    Recent Work
+    <div class="line"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    <!-- Paper 1 -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <div class="flex items-start justify-between gap-2 flex-wrap">
+        <span class="vtag">arXiv · 2026</span>
+        <span class="vtag amber"><i class="fas fa-circle-dot text-xs mr-0.5"></i> New</span>
+      </div>
+      <a href="https://arxiv.org/abs/2605.02739" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        Latent Bridge: Feature Delta Prediction for Efficient Dual-System VLA Model Inference
+      </a>
+      <p class="text-slate-600 text-xs">Vision-Language-Action · Efficient Inference · Robotics</p>
+    </article>
+
+    <!-- Paper 2 -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <div class="flex items-start justify-between gap-2 flex-wrap">
+        <span class="vtag">arXiv · 2026</span>
+        <span class="vtag amber"><i class="fas fa-circle-dot text-xs mr-0.5"></i> New</span>
+      </div>
+      <a href="https://arxiv.org/abs/2603.22872" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        ForeSea: AI Forensic Search with Multi-modal Queries for Video Surveillance
+      </a>
+      <p class="text-slate-600 text-xs">Multi-modal · Video Retrieval · Surveillance AI</p>
+    </article>
+
+    <!-- Paper 3 -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <span class="vtag">arXiv · 2025</span>
+      <a href="https://arxiv.org/abs/2506.08297" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        SEMA: A Scalable and Efficient Mamba-like Attention via Token Localization and Averaging
+      </a>
+      <p class="text-slate-600 text-xs">Efficient Attention · ViT · State Space Models</p>
+    </article>
+
+    <!-- Paper 4 -->
+    <article class="card rounded-xl p-5 flex flex-col gap-3">
+      <div class="flex items-start gap-2 flex-wrap">
+        <span class="vtag">AAAI · 2024</span>
+        <span class="vtag green">12 citations</span>
+      </div>
+      <a href="https://ojs.aaai.org/index.php/AAAI/article/view/28555" target="_blank" rel="noopener noreferrer"
+         class="text-slate-100 font-semibold text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+        MobileInst: Video Instance Segmentation on the Mobile
+      </a>
+      <p class="text-slate-600 text-xs">Mobile AI · Instance Segmentation · Real-time</p>
+    </article>
+
+  </div>
+  <div class="mt-6 text-center">
+    <a href="research_preview.html" class="btn-ghost text-sm">
+      All publications <i class="fas fa-arrow-right text-xs ml-1"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     RESEARCH AREAS
+══════════════════════════════════════════ -->
+<section class="border-t border-slate-800/50">
+  <div class="max-w-6xl mx-auto px-6 py-20 fade-up d3">
+    <div class="section-label">
+      <i class="fas fa-layer-group text-blue-500 opacity-80"></i>
+      Research Areas
+      <div class="line"></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card rounded-xl p-5 text-center group cursor-default">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/15 transition-colors">
+          <i class="fas fa-robot text-blue-400 text-sm"></i>
+        </div>
+        <p class="text-slate-200 font-semibold text-sm mb-1">Agentic AI</p>
+        <p class="text-slate-600 text-xs leading-snug">VLA models &amp; on-device agents</p>
+      </div>
+
+      <div class="card rounded-xl p-5 text-center group cursor-default">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/15 transition-colors">
+          <i class="fas fa-eye text-blue-400 text-sm"></i>
+        </div>
+        <p class="text-slate-200 font-semibold text-sm mb-1">Computer Vision</p>
+        <p class="text-slate-600 text-xs leading-snug">Detection, segmentation, tracking</p>
+      </div>
+
+      <div class="card rounded-xl p-5 text-center group cursor-default">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/15 transition-colors">
+          <i class="fas fa-microchip text-blue-400 text-sm"></i>
+        </div>
+        <p class="text-slate-200 font-semibold text-sm mb-1">Edge AI</p>
+        <p class="text-slate-600 text-xs leading-snug">Quantization, pruning, efficiency</p>
+      </div>
+
+      <div class="card rounded-xl p-5 text-center group cursor-default">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/15 transition-colors">
+          <i class="fas fa-chart-line text-blue-400 text-sm"></i>
+        </div>
+        <p class="text-slate-200 font-semibold text-sm mb-1">Optimization</p>
+        <p class="text-slate-600 text-xs leading-snug">Non-convex &amp; compressed sensing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SELECTED EARLIER WORKS (3-col compact)
+══════════════════════════════════════════ -->
+<section class="border-t border-slate-800/50">
+  <div class="max-w-6xl mx-auto px-6 py-20 fade-up d4">
+    <div class="section-label">
+      <i class="fas fa-star text-blue-500 opacity-80"></i>
+      Highlighted Earlier Work
+      <div class="line"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+      <article class="card rounded-xl p-4 flex flex-col gap-2">
+        <div class="flex gap-2 flex-wrap">
+          <span class="vtag">ICLR 2019</span>
+        </div>
+        <a href="https://openreview.net/pdf?id=Skh4jRcKQ" target="_blank" rel="noopener noreferrer"
+           class="text-slate-200 font-medium text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+          Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets
+        </a>
+      </article>
+
+      <article class="card rounded-xl p-4 flex flex-col gap-2">
+        <div class="flex gap-2 flex-wrap">
+          <span class="vtag">KDD 2020</span>
+          <span class="vtag green">Most Influential</span>
+        </div>
+        <a href="https://arxiv.org/abs/1901.08624" target="_blank" rel="noopener noreferrer"
+           class="text-slate-200 font-medium text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+          AutoShuffleNet: Learning Permutation Matrices via Lipschitz Continuous Penalty in DNNs
+        </a>
+      </article>
+
+      <article class="card rounded-xl p-4 flex flex-col gap-2">
+        <span class="vtag">Math. Programming 2018</span>
+        <a href="https://link.springer.com/article/10.1007/s10107-018-1236-x" target="_blank" rel="noopener noreferrer"
+           class="text-slate-200 font-medium text-sm md:text-base leading-snug hover:text-blue-300 transition-colors">
+          Minimization of Transformed L1 Penalty: Theory, DCA &amp; Compressed Sensing
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="border-t border-slate-800/60 mt-24">
+    <div class="max-w-6xl mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+          <p class="font-mono text-xs text-slate-600 mb-1">Shuai Zhang · Qualcomm AI Research</p>
+          <p class="text-xs text-slate-700">San Diego, CA · © 2026</p>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="https://scholar.google.com/citations?user=QxEgRpUAAAAJ&hl=en"
+             target="_blank" rel="noopener noreferrer" title="Google Scholar"
+             class="text-slate-600 hover:text-blue-400 transition-colors text-lg">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shuai-zhang-20727645/"
+             target="_blank" rel="noopener noreferrer" title="LinkedIn"
+             class="text-slate-600 hover:text-blue-400 transition-colors text-lg">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/zsivine"
+             target="_blank" rel="noopener noreferrer" title="GitHub"
+             class="text-slate-600 hover:text-blue-400 transition-colors text-lg">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://lpcv.ai/"
+             target="_blank" rel="noopener noreferrer" title="LPCVC"
+             class="text-slate-600 hover:text-blue-400 transition-colors text-lg">
+            <i class="fas fa-trophy"></i>
+          </a>
+        </div>
+        <p class="text-xs text-slate-700 text-center md:text-right max-w-xs">
+          Views expressed are solely the author's and do not represent Qualcomm.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 w-9 h-9 flex items-center justify-center text-slate-400 rounded-full hidden shadow-xl" aria-label="Back to top">
+    <i class="fas fa-arrow-up text-xs"></i>
+  </button>
+
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById('menu-toggle');
+    const menu   = document.getElementById('mobile-menu');
+    if (toggle) toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Active nav highlight
+    document.querySelectorAll('.nav-link').forEach(link => {
+      const href = link.getAttribute('href');
+      const path = window.location.pathname.replace(/\/$/, '') || '/';
+      const h    = href.replace(/\/$/, '') || '/';
+      if (h === path || (h !== '/' && path.startsWith(h))) link.classList.add('active');
+    });
+
+    // Scroll progress bar
+    const bar = document.getElementById('scroll-bar');
+    function updateBar() {
+      const d = document.documentElement;
+      const pct = (d.scrollTop / (d.scrollHeight - d.clientHeight)) * 100;
+      bar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateBar, { passive: true });
+
+    // Back to top
+    const btt = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => btt.classList.toggle('hidden', window.scrollY < 400), { passive: true });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
