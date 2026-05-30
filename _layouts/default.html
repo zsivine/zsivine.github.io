@@ -21,24 +21,10 @@
     @media (min-width: 1024px) { html { font-size: 19px; } }
     @media (min-width: 1280px) { html { font-size: 20px; } }
 
-    /* ── Qualcomm design tokens ── */
-    :root {
-      --qc-red:    #e2001a;
-      --qc-red-dk: #b80015;
-      --qc-purple: #7c3aed;
-      --qc-grad:   linear-gradient(135deg, #e2001a 0%, #7c3aed 100%);
-      --bg:        #09090f;
-      --bg-card:   rgba(255,255,255,0.03);
-      --border:    rgba(255,255,255,0.07);
-      --border-hover: rgba(226,0,26,0.35);
-      --text-1:    #f4f4f5;
-      --text-2:    #a1a1aa;
-    }
-
     body {
       font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text-1);
+      background: #0d1f3e;
+      color: #e2e8f0;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -46,49 +32,37 @@
     #scroll-bar {
       position: fixed; top: 0; left: 0; z-index: 100;
       height: 2px; width: 0%;
-      background: var(--qc-grad);
+      background: linear-gradient(90deg, #3b82f6, #818cf8);
       transition: width 0.1s linear;
     }
 
-    /* ── Dot grid ── */
+    /* ── Dot grid background ── */
     .dot-grid {
-      background-image: radial-gradient(rgba(226,0,26,0.07) 1px, transparent 1px);
-      background-size: 28px 28px;
+      background-image: radial-gradient(rgba(99,102,241,0.12) 1px, transparent 1px);
+      background-size: 30px 30px;
     }
 
-    /* ── Hero glow ── */
+    /* ── Radial hero glow ── */
     .hero-glow {
       background:
-        radial-gradient(ellipse 70% 55% at 25% 30%, rgba(226,0,26,0.13) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 40% at 75% 70%, rgba(124,58,237,0.1) 0%, transparent 55%),
-        var(--bg);
+        radial-gradient(ellipse 90% 50% at 50% -5%, rgba(59,130,246,0.25) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(99,102,241,0.1) 0%, transparent 50%),
+        #0d1f3e;
     }
 
-    /* ── Gradient text utility ── */
-    .grad-text {
-      background: var(--qc-grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* ── Nav ── */
+    /* ── Glassmorphism nav ── */
     .glass-nav {
-      position: relative;
-      background: rgba(9,9,15,0.93);
-      backdrop-filter: blur(20px) saturate(180%);
-    }
-    .glass-nav::after {
-      content: '';
-      position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(226,0,26,0.4) 30%, rgba(124,58,237,0.4) 70%, transparent 100%);
+      background: rgba(13,31,62,0.92);
+      backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid rgba(148,163,184,0.1);
     }
 
+    /* ── Nav links ── */
     .nav-link {
       position: relative;
-      font-size: 0.875rem; font-weight: 500;
+      font-size: 0.9rem; font-weight: 500;
       letter-spacing: 0.03em;
-      color: #a1a1aa;
+      color: #94a3b8;
       transition: color 0.15s;
       padding-bottom: 2px;
     }
@@ -96,133 +70,128 @@
       content: '';
       position: absolute; bottom: -2px; left: 0; right: 0;
       height: 1.5px;
-      background: var(--qc-grad);
+      background: #3b82f6;
       transform: scaleX(0); transform-origin: left;
       transition: transform 0.2s ease;
     }
-    .nav-link:hover { color: #ffffff; }
+    .nav-link:hover { color: #e2e8f0; }
     .nav-link:hover::after { transform: scaleX(1); }
-    .nav-link.active { color: #f87171; }
+    .nav-link.active { color: #60a5fa; }
     .nav-link.active::after { transform: scaleX(1); }
 
     /* ── Cards ── */
     .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      background: rgba(10, 28, 60, 0.85);
+      border: 1px solid rgba(148,163,184,0.12);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     }
     .card:hover {
-      border-color: var(--border-hover);
-      box-shadow: 0 0 24px rgba(226,0,26,0.08), 0 8px 32px rgba(0,0,0,0.5);
-      transform: translateY(-2px);
+      border-color: rgba(96,165,250,0.3);
+      box-shadow: 0 0 0 1px rgba(59,130,246,0.05), 0 8px 32px rgba(0,0,0,0.4);
+      transform: translateY(-1px);
     }
 
     /* ── Section label ── */
     .section-label {
-      display: flex; align-items: center; gap: 0.7rem;
+      display: flex; align-items: center; gap: 0.6rem;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem; font-weight: 600;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--text-2);
-      margin-bottom: 1.75rem;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 1.5rem;
     }
     .section-label .accent-bar {
       width: 3px; height: 1rem; border-radius: 2px;
-      background: var(--qc-grad); flex-shrink: 0;
+      background: #3b82f6; flex-shrink: 0;
     }
     .section-label .line {
       flex: 1; height: 1px;
-      background: linear-gradient(to right, rgba(226,0,26,0.2), transparent);
+      background: linear-gradient(to right, rgba(148,163,184,0.12), transparent);
     }
 
-    /* ── Venue badges ── */
+    /* ── Mono tags / venue badges ── */
     .vtag {
       display: inline-block;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem; font-weight: 500;
-      padding: 2px 8px; border-radius: 3px;
+      font-size: 0.75rem; font-weight: 500;
+      padding: 2px 8px; border-radius: 4px;
       white-space: nowrap;
-      background: rgba(226,0,26,0.08);
-      color: #f87171;
-      border: 1px solid rgba(226,0,26,0.22);
+      background: rgba(59,130,246,0.1);
+      color: #60a5fa;
+      border: 1px solid rgba(59,130,246,0.2);
     }
     .vtag.green {
-      background: rgba(34,197,94,0.07);
+      background: rgba(34,197,94,0.08);
       color: #4ade80;
       border-color: rgba(34,197,94,0.2);
     }
     .vtag.amber {
       background: rgba(245,158,11,0.08);
       color: #fbbf24;
-      border-color: rgba(245,158,11,0.22);
+      border-color: rgba(245,158,11,0.2);
     }
 
     /* ── Stat boxes ── */
     .stat-box {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid var(--border);
+      background: rgba(10,28,60,0.9);
+      border: 1px solid rgba(148,163,184,0.12);
       border-radius: 10px; padding: 0.875rem 1.25rem;
       text-align: center;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s;
     }
-    .stat-box:hover {
-      border-color: rgba(226,0,26,0.3);
-      box-shadow: 0 0 16px rgba(226,0,26,0.06);
-    }
+    .stat-box:hover { border-color: rgba(96,165,250,0.25); }
     .stat-box .num {
       font-family: 'JetBrains Mono', monospace;
       font-size: 1.625rem; font-weight: 700;
-      background: var(--qc-grad);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; line-height: 1;
+      color: #60a5fa; line-height: 1;
     }
     .stat-box .lbl {
-      font-size: 0.72rem; color: var(--text-2);
+      font-size: 0.75rem; color: #94a3b8;
       letter-spacing: 0.1em; text-transform: uppercase;
       margin-top: 4px; font-weight: 500;
     }
 
     /* ── Buttons ── */
     .btn-blue {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.55rem 1.2rem;
-      background: var(--qc-red);
-      color: #fff; border-radius: 5px;
-      font-weight: 600; font-size: 0.875rem;
-      letter-spacing: 0.01em;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.5rem 1.1rem;
+      background: #3b82f6;
+      color: #fff; border-radius: 6px;
+      font-weight: 500; font-size: 0.875rem;
       transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+      box-shadow: 0 0 0 0 rgba(59,130,246,0);
     }
     .btn-blue:hover {
-      background: var(--qc-red-dk);
+      background: #2563eb;
       transform: translateY(-1px);
-      box-shadow: 0 4px 20px rgba(226,0,26,0.45);
+      box-shadow: 0 4px 16px rgba(59,130,246,0.35);
     }
     .btn-ghost {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.55rem 1.2rem;
-      background: transparent;
-      color: #a1a1aa;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 5px;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.5rem 1.1rem;
+      background: rgba(148,163,184,0.06);
+      color: #94a3b8;
+      border: 1px solid rgba(148,163,184,0.14);
+      border-radius: 6px;
       font-weight: 500; font-size: 0.875rem;
       transition: border-color 0.15s, color 0.15s, background 0.15s;
     }
     .btn-ghost:hover {
-      border-color: rgba(226,0,26,0.5);
-      color: #f87171;
-      background: rgba(226,0,26,0.05);
+      border-color: rgba(96,165,250,0.4);
+      color: #93c5fd;
+      background: rgba(59,130,246,0.06);
     }
 
     /* ── Timeline ── */
-    .tl-track { border-left: 1px solid rgba(226,0,26,0.2); }
+    .tl-track { border-left: 1px solid rgba(59,130,246,0.2); }
     .tl-dot {
       width: 9px; height: 9px; border-radius: 50%;
-      background: var(--qc-red); flex-shrink: 0;
-      box-shadow: 0 0 0 3px rgba(226,0,26,0.15);
+      background: #3b82f6; flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
     }
     .tl-dot.muted {
-      background: #3f3f46;
-      box-shadow: 0 0 0 3px rgba(63,63,70,0.35);
+      background: #334155;
+      box-shadow: 0 0 0 3px rgba(51,65,85,0.4);
     }
 
     /* ── Fade animations ── */
@@ -238,26 +207,21 @@
 
     /* ── Back to top ── */
     #back-to-top {
-      background: rgba(20,20,28,0.95);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(13,31,62,0.95);
+      border: 1px solid rgba(148,163,184,0.15);
       backdrop-filter: blur(8px);
-      color: #a1a1aa;
-      transition: color 0.15s, transform 0.2s, border-color 0.15s;
+      transition: opacity 0.2s, transform 0.2s;
     }
-    #back-to-top:hover {
-      transform: translateY(-2px);
-      color: #f87171;
-      border-color: rgba(226,0,26,0.4);
-    }
+    #back-to-top:hover { transform: translateY(-2px); }
 
-    /* ── Scrollbar ── */
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: rgba(226,0,26,0.35); border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--qc-red); }
+    /* ── Custom scrollbar ── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0d1f3e; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
     /* ── Selection ── */
-    ::selection { background: rgba(226,0,26,0.22); color: #fff; }
+    ::selection { background: rgba(59,130,246,0.25); color: #e2e8f0; }
   </style>
 </head>
 
@@ -271,8 +235,8 @@
 
       <!-- Logo -->
       <a href="/" class="flex items-center gap-2 group shrink-0">
-        <span class="font-mono text-red-500 text-sm opacity-80 group-hover:opacity-100 transition-opacity select-none">&gt;_</span>
-        <span class="font-semibold text-white text-sm tracking-tight">Shuai Zhang</span>
+        <span class="font-mono text-blue-500 text-sm opacity-70 group-hover:opacity-100 transition-opacity select-none">&gt;_</span>
+        <span class="font-semibold text-slate-200 text-sm tracking-tight">Shuai Zhang</span>
       </a>
 
       <!-- Desktop links -->
@@ -320,22 +284,22 @@
         <div class="flex items-center gap-6">
           <a href="https://scholar.google.com/citations?user=QxEgRpUAAAAJ&hl=en"
              target="_blank" rel="noopener noreferrer" title="Google Scholar"
-             class="text-slate-600 hover:text-red-400 transition-colors text-lg">
+             class="text-slate-600 hover:text-blue-400 transition-colors text-lg">
             <i class="fas fa-graduation-cap"></i>
           </a>
           <a href="https://www.linkedin.com/in/shuai-zhang-20727645/"
              target="_blank" rel="noopener noreferrer" title="LinkedIn"
-             class="text-slate-600 hover:text-red-400 transition-colors text-lg">
+             class="text-slate-600 hover:text-blue-400 transition-colors text-lg">
             <i class="fab fa-linkedin"></i>
           </a>
           <a href="https://github.com/zsivine"
              target="_blank" rel="noopener noreferrer" title="GitHub"
-             class="text-slate-600 hover:text-red-400 transition-colors text-lg">
+             class="text-slate-600 hover:text-blue-400 transition-colors text-lg">
             <i class="fab fa-github"></i>
           </a>
           <a href="https://lpcv.ai/"
              target="_blank" rel="noopener noreferrer" title="LPCVC"
-             class="text-slate-600 hover:text-red-400 transition-colors text-lg">
+             class="text-slate-600 hover:text-blue-400 transition-colors text-lg">
             <i class="fas fa-trophy"></i>
           </a>
         </div>
